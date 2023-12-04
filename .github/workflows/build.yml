@@ -44,9 +44,10 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Code Coverage Report
-        uses: romeovs/lcov-reporter-action@v0.3.1
+        uses: ziishaned/jest-reporter-action@v0.1.1
         with:
           lcov-file: ./coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
