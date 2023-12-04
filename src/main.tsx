@@ -11,7 +11,9 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home/>
   }
-]);
+], {
+  basename: "/colwdvatn-rails/"
+});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

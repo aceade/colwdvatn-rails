@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 200px;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    background-color: aliceblue;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+
+    > div > a {
+        padding: 5px 2px;
+        border: 2px solid #050a30;
+        border-radius: 5px;
+        width: calc(100% - 10px);
+        display: inline-block;
+        box-sizing: content-box;
+        background-color: gold;
+    }
+}
+
+nav.collapsed {
+    max-width: 100px;
+    width: 100%;
+    padding: 0px;
+    background-color: gold;
+    gap: 0;
+
+    &> button {
+        background-color: gold;
+        color: black;
+        border-radius: 0px;
+    }
+
+    > div > a {
+        display: none;
+    }
+}
