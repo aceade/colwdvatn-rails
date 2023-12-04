@@ -44,7 +44,7 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Code Coverage Report
-        uses: ziishaned/jest-reporter-action@v0.1.1
+        uses: ziishaned/jest-reporter-action@0.1.1
         with:
           lcov-file: ./coverage/lcov.info
           github-token: ${{ secrets.GITHUB_TOKEN }}
