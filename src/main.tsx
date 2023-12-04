@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <Home/>
   }
 ], {
-  basename: "/colwdvatn-rails/"
+  basename: "/colwdvatn-rails"
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
