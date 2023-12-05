@@ -78,3 +78,9 @@ button:focus-visible {
   top: 0px;
   max-width: 100px;
 }
+
+@media (max-width: 400px) {
+  #logo {
+    max-width: 40px;
+  }
+}
