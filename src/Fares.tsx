@@ -24,17 +24,17 @@ export default function Fares() {
                     </button>
                 </td>
                 <td className="secondClass" key={ticket.to + "-2"}>
-                <button onClick={() => buyTicket(from, ticket.to, ticket.secondClass)}>
+                    <button onClick={() => buyTicket(from, ticket.to, ticket.secondClass)}>
                         {`τ${ticket.secondClass}`}
-                </button>
+                    </button>
                 </td>
             </>
         )
     }
-    
+
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <main>
                 <h1>Fares and Tickets</h1>
 
@@ -66,11 +66,53 @@ export default function Fares() {
                             })
                         }
                     </tbody>
-                    <tfoot>
-
-                    </tfoot>
                 </table>
+                <div id="prices">
+                    <div className="firstClass">
+                        1st Class
+                    </div>
+                    <div className="secondClass">
+                        2nd Class
+                    </div>
+                    <div>
+                        All prices in talers.
+                    </div>
+                </div>
+
+                <hr />
+
+                <section>
+                    <header>
+                        <h1>Photos</h1>
+                        <div id="photos">
+                            <div>
+                                <h2>First Class</h2>
+                                <img srcSet="/colwdvatn-rails/trains/FirstClassLounge-320w.webp 320w, /colwdvatn-rails/trains/FirstClassLounge-480w.webp 480w, /colwdvatn-rails/trains/FirstClassLounge-600w.webp 600w"
+                                    alt="The first-class Faledonian Lounge"
+                                    sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 600px"
+                                />
+                                <img srcSet="/colwdvatn-rails/trains/FirstClassSleeper-320w.webp 320w, /colwdvatn-rails/trains/FirstClassSleeper-480w.webp 480w, /colwdvatn-rails/trains/FirstClassSleeper-800w.webp 800w"
+                                    alt="First class berth"
+                                    sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 600px"
+                                />
+                            </div>
+                            <div>
+                                <h2>Second Class</h2>
+                                <img srcSet="/colwdvatn-rails/trains/SecondClassLounge-320w.webp 320w, /colwdvatn-rails/trains/SecondClassLounge-480w.webp 480w, /colwdvatn-rails/trains/SecondClassLounge-600w.webp 600w"
+                                    alt="Cafe car"
+                                    sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 600px"
+                                />
+                                <img srcSet="/colwdvatn-rails/trains/SecondClassSleeper-320w.webp 320w, /colwdvatn-rails/trains/SecondClassSleeper-480w.webp 480w, /colwdvatn-rails/trains/SecondClassSleeper-800w.webp 800w"
+                                    alt="Second class berth"
+                                    sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 600px"
+                                />
+                            </div>
+                        </div>
+                    </header>
+                </section>
             </main>
+
+
         </>
     )
 }
