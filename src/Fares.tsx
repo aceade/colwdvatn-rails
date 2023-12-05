@@ -4,6 +4,10 @@ import "./Fares.css";
 
 export default function Fares() {
 
+    const buyTicket = (from: string, to: string, price: number) => {
+        console.info(`Buying ticket (${price}) from ${from} to ${to}`)
+    }
+
     const makePriceEntry = (from: string, ticket: Ticket) => {
         // exit early if this is the same station
         const isSameStation = from === ticket.to;
@@ -14,8 +18,16 @@ export default function Fares() {
         }
         return (
             <>
-                <td className="firstClass" key={ticket.to + "-1"}>{ticket.firstClass}</td>
-                <td className="secondClass" key={ticket.to + "-2"}>{ticket.secondClass}</td>
+                <td className="firstClass" key={ticket.to + "-1"}>
+                    <button onClick={() => buyTicket(from, ticket.to, ticket.firstClass)}>
+                        {`τ${ticket.firstClass}`}
+                    </button>
+                </td>
+                <td className="secondClass" key={ticket.to + "-2"}>
+                <button onClick={() => buyTicket(from, ticket.to, ticket.secondClass)}>
+                        {`τ${ticket.secondClass}`}
+                </button>
+                </td>
             </>
         )
     }
@@ -36,7 +48,6 @@ export default function Fares() {
                                     return <th colSpan={2} key={index}>{value.from}</th>
                                 })
                             }
-                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,9 +61,6 @@ export default function Fares() {
                                                 return makePriceEntry(value.from, ticket)
                                             })
                                         }
-                                        <td>
-                                            <button>Buy</button>
-                                        </td>
                                     </tr>
                                 );
                             })

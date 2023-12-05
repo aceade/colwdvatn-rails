@@ -10,8 +10,8 @@ export interface StationEntry {
 
 export interface Ticket {
     to: string;
-    firstClass: string;
-    secondClass: string;
+    firstClass: number;
+    secondClass: number;
 }
 
 export interface TicketCost {
@@ -123,23 +123,23 @@ export const fares: TicketCost[] = [
         tickets: [
             {
                 to: "Levarche",
-                firstClass: "",
-                secondClass: ""
+                firstClass: 0,
+                secondClass: 0
             },
             {
                 to: "Tinland",
-                firstClass: "τ190",
-                secondClass: "τ100"
+                firstClass: 190,
+                secondClass: 100
             },
             {
                 to: "Kerbalstead",
-                firstClass: "τ370",
-                secondClass: "τ280"
+                firstClass: 370,
+                secondClass: 280
             },
             {
                 to: "Colwdvatn",
-                firstClass: "τ440",
-                secondClass: "τ390"
+                firstClass: 440,
+                secondClass: 390
             }
         ]
 
@@ -149,23 +149,23 @@ export const fares: TicketCost[] = [
         tickets: [
             {
                 to: "Levarche",
-                firstClass: "τ190",
-                secondClass: "τ100"
+                firstClass: 190,
+                secondClass: 100
             },
             {
                 to: "Tinland",
-                firstClass: "",
-                secondClass: ""
+                firstClass: 0,
+                secondClass: 0
             },
             {
                 to: "Kerbalstead",
-                firstClass: "τ220",
-                secondClass: "τ170"
+                firstClass: 220,
+                secondClass: 170
             },
             {
                 to: "Colwdvatn",
-                firstClass: "τ310",
-                secondClass: "τ260"
+                firstClass: 310,
+                secondClass: 260
             }
         ]
     },
@@ -174,23 +174,23 @@ export const fares: TicketCost[] = [
         tickets: [
             {
                 to: "Levarche",
-                firstClass: "τ220",
-                secondClass: "τ170"
+                firstClass: 220,
+                secondClass: 170
             },
             {
                 to: "Tinland",
-                firstClass: "τ220",
-                secondClass: "τ170"
+                firstClass: 220,
+                secondClass: 170
             },
             {
                 to: "Kerbalstead",
-                firstClass: "",
-                secondClass: ""
+                firstClass: 0,
+                secondClass: 0
             },
             {
                 to: "Colwdvatn",
-                firstClass: "τ200",
-                secondClass: "τ150"
+                firstClass: 200,
+                secondClass: 150
             }
         ]
     },
@@ -199,23 +199,23 @@ export const fares: TicketCost[] = [
         tickets: [
             {
                 to: "Levarche",
-                firstClass: "τ440",
-                secondClass: "τ390"
+                firstClass: 440,
+                secondClass: 390
             },
             {
                 to: "Tinland",
-                firstClass: "τ310",
-                secondClass: "τ260"
+                firstClass: 310,
+                secondClass: 260
             },
             {
                 to: "Kerbalstead",
-                firstClass: "τ200",
-                secondClass: "τ150"
+                firstClass: 200,
+                secondClass: 150
             },
             {
                 to: "Colwdvatn",
-                firstClass: "",
-                secondClass: ""
+                firstClass: 0,
+                secondClass: 0
             }
         ]
     }
