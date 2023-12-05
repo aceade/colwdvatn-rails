@@ -5,11 +5,16 @@ import Home from './Home';
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Fares from './Fares';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>
+  },
+  {
+    path: "/fares",
+    element: <Fares/>
   }
 ], {
   basename: "/colwdvatn-rails"

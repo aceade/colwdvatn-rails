@@ -16,10 +16,12 @@ export default function Navbar() {
     return (
         <>
             <header>
+                <img id="logo" src="/colwdvatn-rails/headerLogo.webp" alt="Colwdvatn & Kerbalstead Rails"></img>
                 <nav className={menuOpen ? "" : "collapsed"}>
                     <button onClick={toggleMenu}>Menu</button>
                     <div>
                         <Link to="/">Home</Link>
+                        <Link to="/fares">Fares & Tickets</Link>
                     </div>
                 </nav>
             </header>
