@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext, CartTicket } from "../cart/CartContext";
 
@@ -10,28 +10,29 @@ export default function Navbar() {
 
     const cart = useContext(CartContext);
 
+    const emptyCartSrc = "/colwdvatn-rails/cart-empty.svg";
+    const fullCartSrc = "/colwdvatn-rails/cart.svg";
+
     const [menuOpen, setMenuOpen] = useState(false);
+    const [cartImageAlt, setCartImageAlt] = useState("0 tickets");
+    const [cartImageSrc, setCartImageSrc] = useState(emptyCartSrc);
+    const [cartCount, setCartCount] = useState(0);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
 
-    const getCartImageSrc = (cart: CartTicket[]) => {
-        console.info(cart.length);
-        if (cart.length > 0) {
-            return "/colwdvatn-rails/cart.svg";
-        }
-        return "/colwdvatn-rails/cart-empty.svg";
-        
-    }
-
-    const getCartImageAlt = (cart: CartTicket[]) => {
-        return `${cart.length.toLocaleString()} tickets`;
-    }
-
-    const getCartTotal = (cart: CartTicket[]) => {
-        return cart.length.toLocaleString();
-    }
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const length = cart.length;
+            setCartCount(length);
+            setCartImageAlt(`${length} tickets`);
+            if (length > 0) {
+                setCartImageSrc(fullCartSrc);
+            }
+        }, 100);
+        return () => clearInterval(intervalId);
+    }, []);
 
     return (
         <>
@@ -41,8 +42,8 @@ export default function Navbar() {
                     <button onClick={toggleMenu}>Menu</button>
                     <button id="openCart">
                         <CartContext.Provider value={cart}>
-                            <img src={getCartImageSrc(cart)} alt={getCartImageAlt(cart)} />
-                            <p>{getCartTotal(cart)}</p>
+                            <img src={cartImageSrc} alt={cartImageAlt} />
+                            <p>{cartCount}</p>
                         </CartContext.Provider>
                     </button>
                     
