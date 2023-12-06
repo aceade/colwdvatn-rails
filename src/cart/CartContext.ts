@@ -9,6 +9,6 @@ export interface CartTicket {
     price: number;
 }
 
-const cart: CartTicket[] = new Array();
+const cart: CartTicket[] = [];
 
 export const CartContext = createContext(cart);

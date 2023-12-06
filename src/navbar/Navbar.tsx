@@ -53,7 +53,7 @@ export default function Navbar() {
             setCartTotal(total);
         }, 100);
         return () => clearInterval(intervalId);
-    }, []);
+    });
 
     return (
         <>
@@ -101,7 +101,7 @@ export default function Navbar() {
                             <input type="date" id="departureDate" onChange={(e) => dispatch({
                                 type: StateAction.setDate, value: e.target.valueAsDate!
                             })}/>
-                            <button onClick={() => makePurchase(formState, cart, dispatch)}>Make Your Reservation</button>
+                            <button onClick={() => makePurchase(formState, dispatch)}>Make Your Reservation</button>
                         </div>
 
                 </dialog>
