@@ -22,6 +22,16 @@ nav {
         box-sizing: content-box;
         background-color: gold;
     }
+
+    > #openCart {
+
+        position: absolute;
+        top:0px;
+        left: 215px;
+        background-color: white;
+    
+        border-radius: 50%;
+    }
 }
 
 nav.collapsed {
@@ -40,14 +50,43 @@ nav.collapsed {
     > div > a {
         display: none;
     }
+
+    > #openCart {
+        left:105px;
+    }
 }
 
-#openCart {
+#cartDialog {
+    display: none;
+    top: 100px;
+    border-radius: 10px;
 
-    border-radius: 50%;
+    &> div {
+        display:flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
 
-    > p {
-        max-width: 32px;
-        max-height: 32px;
+        &> p {
+            width: 80%;
+        }
+
+        &> #total {
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        &> button {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 20%;
+        }
     }
+}
+
+#cartDialog.visible {
+    display: flex;
+    flex-direction: column;
+    
 }
