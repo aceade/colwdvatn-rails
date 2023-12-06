@@ -60,6 +60,7 @@ nav.collapsed {
     display: none;
     top: 100px;
     border-radius: 10px;
+    z-index: 1;
 
     &> div {
         display:flex;
@@ -71,18 +72,36 @@ nav.collapsed {
             width: 80%;
         }
 
-        &> #total {
-            width: 100%;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+       
 
         &> button {
             padding-top: 2px;
             padding-bottom: 2px;
             width: 20%;
         }
+        
     }
+
+    &> .payForm {
+
+        flex-direction: column;
+
+        &> input, label, button {
+            width: 100%;
+            min-width: 200px;
+        }
+    }
+
+}
+
+#total {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+hr {
+    width: 100%;
 }
 
 #cartDialog.visible {

@@ -88,7 +88,8 @@ export default function Navbar() {
                             })
                         }
                         <p id="total">Total: τ{cartTotal}</p>
-                        <div>
+                        <hr/>
+                        <div className="payForm">
                             <label htmlFor="customerName">Your Name</label>
                             <input type="name" id="customerName" onChange={(e) => dispatch({
                                 type: StateAction.setName, value: e.target.value
