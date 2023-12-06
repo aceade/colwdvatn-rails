@@ -1,11 +1,21 @@
+import { useContext, useState } from "react";
+import { CartContext, CartTicket } from "./cart/CartContext";
 import Navbar from "./navbar/Navbar";
 import { fares, Ticket } from "./stations";
 import "./Fares.css";
 
 export default function Fares() {
 
+    const [cart, setCart] = useState<CartTicket[]>([]);
+    const cartContext = useContext(CartContext);
+
     const buyTicket = (from: string, to: string, price: number) => {
-        console.info(`Buying ticket (${price}) from ${from} to ${to}`)
+        console.info(`Buying ticket (${price}) from ${from} to ${to}`);
+        cartContext.push({
+            from, to, price
+        });
+        setCart(cartContext);
+
     }
 
     const makePriceEntry = (from: string, ticket: Ticket) => {
@@ -38,6 +48,7 @@ export default function Fares() {
             <main>
                 <h1>Fares and Tickets</h1>
 
+                <CartContext.Provider value={cart}></CartContext.Provider>
                 <table>
                     <thead>
                         <tr>

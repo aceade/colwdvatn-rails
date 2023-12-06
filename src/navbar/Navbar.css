@@ -41,3 +41,13 @@ nav.collapsed {
         display: none;
     }
 }
+
+#openCart {
+
+    border-radius: 50%;
+
+    > p {
+        max-width: 32px;
+        max-height: 32px;
+    }
+}
