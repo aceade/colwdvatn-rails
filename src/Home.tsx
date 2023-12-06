@@ -19,7 +19,6 @@ export default function Home() {
         <>
             <Navbar></Navbar>
             <main>
-                <img id="logo" src="/colwdvatn-rails/headerLogo.webp" alt="Logo"></img>
                 <h1>Colwdvatn & Kerbalstead Rails</h1>
                 <p>Your gateway to The Sydfjords</p>
 

@@ -47,7 +47,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: gold;
+  color: black;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -77,4 +78,15 @@ button:focus-visible {
   right: 0px;
   top: 0px;
   max-width: 100px;
+}
+
+@media (max-width: 500px) {
+  #logo {
+    max-width: 40px;
+  }
+
+  main {
+    top:50px;
+    position: relative;
+  }
 }

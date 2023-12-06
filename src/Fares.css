@@ -1,0 +1,61 @@
+.firstClass {
+    font-weight:bold;
+    color: #050a30;
+    background-color: gold;
+
+}
+
+.secondClass {
+    background-color: white;
+    color: #050a30;
+
+    > button {
+        background-color: #050a30;
+        color: white;
+    }
+}
+
+
+#prices {
+    place-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    > div {
+        max-width: 100px;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+}
+
+
+#photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > img {
+            max-height: 450px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #photos {
+        display: flex;
+        flex-direction: column;
+
+        > img {
+            max-width: 300px;
+        }
+    }
+}

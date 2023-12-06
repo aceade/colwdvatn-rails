@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# Cowldvatn Rails
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React practice project to get some more practice with React's [useContext](https://react.dev/reference/react/useContext) hook. The use case here is displaying a "shopping cart" on the navbar while the user browses a different page.
 
-Currently, two official plugins are available:
+## Related projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is partly inspired by [this other project](https://aceade.github.io/sydfjords-react/) and [its original Vue version](https://aceade.github.io/sydfjords/). They're part of the same fictional universe.
 
-## Expanding the ESLint configuration
+## Third-party sources
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The cart icon comes from [boxicons](https://boxicons.com), and the site logo/favicon was originally generated with Canva. The images used come from Wikimedia:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [Caledonian Sleeper](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Caledonian_Sleeper_Mk5_accessible_room.jpg/1024px-Caledonian_Sleeper_Mk5_accessible_room.jpg)
+- [Caledonian Lounge](https://commons.wikimedia.org/wiki/File:Caledonian_Sleeper_Lounge_car.jpg)
+- [Overland train car](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/The_Overland_train_--_cafe_car_interior%2C_June_2009.jpg/1280px-The_Overland_train_--_cafe_car_interior%2C_June_2009.jpg)
+- [2nd Class Sleeper in Japan](https://commons.wikimedia.org/wiki/File:14-series_sleeper_train_in_Japan(2nd_class).jpg)

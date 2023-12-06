@@ -8,14 +8,25 @@ export interface StationEntry {
     dates: ArrivalAndDeparture[];
 }
 
+export interface Ticket {
+    to: string;
+    firstClass: number;
+    secondClass: number;
+}
+
+export interface TicketCost {
+    from: string;
+    tickets: Ticket[];
+}
+
 export const inboundStations: StationEntry[] = [
     {
         location: "Grand Central, Levarche",
         dates: [{
             departure: "11am Monday"
-        },{
+        }, {
             departure: "11am Wednesday"
-        },{
+        }, {
             departure: "11am Friday"
         }]
     },
@@ -62,9 +73,9 @@ export const outboundStations: StationEntry[] = [
         location: "Colwdvatn",
         dates: [{
             departure: "9am Monday"
-        },{
+        }, {
             departure: "9am Wednesday"
-        },{
+        }, {
             departure: "9am Friday"
         }]
     },
@@ -103,5 +114,109 @@ export const outboundStations: StationEntry[] = [
         }, {
             arrival: "2pm Wednesday",
         }]
+    }
+];
+
+export const fares: TicketCost[] = [
+    {
+        from: "Levarche",
+        tickets: [
+            {
+                to: "Levarche",
+                firstClass: 0,
+                secondClass: 0
+            },
+            {
+                to: "Tinland",
+                firstClass: 190,
+                secondClass: 100
+            },
+            {
+                to: "Kerbalstead",
+                firstClass: 370,
+                secondClass: 280
+            },
+            {
+                to: "Colwdvatn",
+                firstClass: 440,
+                secondClass: 390
+            }
+        ]
+
+    },
+    {
+        from: "Tinland",
+        tickets: [
+            {
+                to: "Levarche",
+                firstClass: 190,
+                secondClass: 100
+            },
+            {
+                to: "Tinland",
+                firstClass: 0,
+                secondClass: 0
+            },
+            {
+                to: "Kerbalstead",
+                firstClass: 220,
+                secondClass: 170
+            },
+            {
+                to: "Colwdvatn",
+                firstClass: 310,
+                secondClass: 260
+            }
+        ]
+    },
+    {
+        from: "Kerbalstead",
+        tickets: [
+            {
+                to: "Levarche",
+                firstClass: 220,
+                secondClass: 170
+            },
+            {
+                to: "Tinland",
+                firstClass: 220,
+                secondClass: 170
+            },
+            {
+                to: "Kerbalstead",
+                firstClass: 0,
+                secondClass: 0
+            },
+            {
+                to: "Colwdvatn",
+                firstClass: 200,
+                secondClass: 150
+            }
+        ]
+    },
+    {
+        from: "Colwdvatn",
+        tickets: [
+            {
+                to: "Levarche",
+                firstClass: 440,
+                secondClass: 390
+            },
+            {
+                to: "Tinland",
+                firstClass: 310,
+                secondClass: 260
+            },
+            {
+                to: "Kerbalstead",
+                firstClass: 200,
+                secondClass: 150
+            },
+            {
+                to: "Colwdvatn",
+                firstClass: 0,
+                secondClass: 0
+            }
+        ]
     }
 ];

@@ -6,10 +6,12 @@ nav {
     width: 100%;
     position: fixed;
     left: 0px;
+    top: 0px;
     background-color: aliceblue;
     border-bottom-right-radius: 10px;
     padding: 5px;
     font-size: 1.2rem;
+    z-index: 1;
 
     > div > a {
         padding: 5px 2px;
@@ -19,6 +21,16 @@ nav {
         display: inline-block;
         box-sizing: content-box;
         background-color: gold;
+    }
+
+    > #openCart {
+
+        position: absolute;
+        top:0px;
+        left: 215px;
+        background-color: white;
+    
+        border-radius: 50%;
     }
 }
 
@@ -38,4 +50,62 @@ nav.collapsed {
     > div > a {
         display: none;
     }
+
+    > #openCart {
+        left:105px;
+    }
+}
+
+#cartDialog {
+    display: none;
+    top: 100px;
+    border-radius: 10px;
+    z-index: 1;
+
+    &> div {
+        display:flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+
+        &> p {
+            width: 80%;
+        }
+
+       
+
+        &> button {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 20%;
+        }
+        
+    }
+
+    &> .payForm {
+
+        flex-direction: column;
+
+        &> input, label, button {
+            width: 100%;
+            min-width: 200px;
+        }
+    }
+
+}
+
+#total {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+hr {
+    width: 100%;
+}
+
+#cartDialog.visible {
+    display: flex;
+    flex-direction: column;
+    
 }
