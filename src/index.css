@@ -40,6 +40,15 @@ h1 {
   line-height: 1.1;
 }
 
+
+h2 {
+  background-color: gold;
+  border-radius: 15px;
+  padding: 10px;
+  color: #050a30;
+}
+
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -81,6 +90,11 @@ button:focus-visible {
 }
 
 @media (max-width: 500px) {
+
+  :root {
+    font-weight: 200;
+  }
+
   #logo {
     max-width: 40px;
   }

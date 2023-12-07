@@ -21,6 +21,7 @@ nav {
         display: inline-block;
         box-sizing: content-box;
         background-color: gold;
+        margin-bottom: 1px;
     }
 
     > #openCart {
@@ -29,8 +30,12 @@ nav {
         top:0px;
         left: 215px;
         background-color: white;
+        display: flex;
+        gap:0.2rem;
     
-        border-radius: 50%;
+        border-radius: 25%;
+
+        
     }
 }
 
