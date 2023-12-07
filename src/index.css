@@ -89,6 +89,11 @@ button:focus-visible {
   max-width: 100px;
 }
 
+main {
+  top: 70px;
+  position:relative
+}
+
 @media (max-width: 500px) {
 
   :root {

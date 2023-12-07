@@ -33,9 +33,7 @@ nav {
         display: flex;
         gap:0.2rem;
     
-        border-radius: 25%;
-
-        
+        border-radius: 25%;       
     }
 }
 
@@ -50,6 +48,7 @@ nav.collapsed {
         background-color: gold;
         color: black;
         border-radius: 0px;
+        border: 1px solid #050a30;
     }
 
     > div > a {

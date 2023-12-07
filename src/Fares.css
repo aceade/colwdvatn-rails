@@ -50,6 +50,23 @@
     }
 }
 
+@media (max-width: 900px) {
+    #photos {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+    }
+
+    button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    img {
+        max-width: 640px;
+    }
+}
+
 @media (max-width: 500px) {
 
     button {
@@ -57,11 +74,6 @@
         padding-right: 5px;
     }
 
-    #photos {
-        display: flex;
-        flex-direction: column;   
-        align-items: center;
-    }
 
     img {
         max-width: 480px;
