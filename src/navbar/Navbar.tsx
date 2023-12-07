@@ -23,7 +23,7 @@ export default function Navbar() {
     const dialogRef = useRef<HTMLDialogElement>();
     const [cartTotal, setCartTotal] = useState(0);
 
-    // putting customer details here because...it's going to be common to all pages.
+    // putting customer details here because it's going to be common to all pages.
     const [formState, dispatch] = useReducer(updateFormState, { name: "", email: "", departureDate: new Date(), tickets: [] });
 
     const toggleMenu = () => {

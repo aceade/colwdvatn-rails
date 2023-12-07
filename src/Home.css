@@ -16,17 +16,17 @@ td {
     white-space: pre;
 }
 
+
 @media (max-width: 500px) {
+
+    .rowHeader {
+        font-size: 0.9rem;
+    }
+
     td {
         max-width: 20ch;
-        padding: 0.5rem;
+        padding: 1px;
         white-space: pre-line;
     }
 }
 
-h2 {
-    background-color: gold;
-    border-radius: 15px;
-    padding: 10px;
-    color: #050a30;
-}
