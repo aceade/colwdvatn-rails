@@ -6,6 +6,7 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Fares from './Fares';
+import { Freight } from './Freight';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/fares",
     element: <Fares/>
+  },
+  {
+    path: "/freight",
+    element: <Freight/>
   }
 ], {
   basename: "/colwdvatn-rails"

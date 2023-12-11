@@ -5,10 +5,22 @@ export enum StateAction {
     setAddress,
     setTickets,
     setDate,
+    setCompany,
+    setMessage,
     reset
 }
 
-export function updateFormState(state: object, action: {type: StateAction; value?: string | Date | CartTicket[]}) {
+export interface CartStateAction {
+    type: StateAction;
+    value?: string | Date | CartTicket[];
+}
+
+export interface FreightStateAction {
+    type: StateAction;
+    value?: string;
+}
+
+export function updateCartFormState(state: object, action: CartStateAction) {
     
     switch (action.type) {
         case StateAction.setName:
@@ -39,5 +51,41 @@ export function updateFormState(state: object, action: {type: StateAction; value
                 departureDate: new Date(),
                 tickets: []
             };
+        default:
+            return state;
+    }
+}
+
+export function updateFreightFormState(state: object, action: FreightStateAction) {
+    switch(action.type) {
+        case StateAction.setName:
+            return {
+                ...state,
+                name: action.value,
+            };
+        case StateAction.setAddress:
+            return {
+                ...state,
+                email: action.value,
+            };
+        case StateAction.setCompany:
+            return {
+                ...state,
+                company: action.value
+            }
+        case StateAction.setMessage:
+            return {
+                ...state,
+                message: action.value
+            }
+        case StateAction.reset:
+            return {
+                ...state,
+                name: "",
+                email: "",
+                company: "",
+                message: "",
+            };
+        default: return state;
     }
 }

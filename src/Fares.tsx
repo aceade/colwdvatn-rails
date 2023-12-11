@@ -3,6 +3,7 @@ import { CartContext, CartTicket } from "./cart/CartContext";
 import Navbar from "./navbar/Navbar";
 import { fares, Ticket } from "./stations";
 import "./Fares.css";
+import "./photos.css";
 
 export default function Fares() {
 

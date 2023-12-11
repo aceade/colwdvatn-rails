@@ -23,7 +23,7 @@ export default function Home() {
                 <p>Your gateway to The Sydfjords</p>
 
                 <section>
-                    <h2>Live Trains (Inbound)</h2>
+                    <h2>Live Passenger Trains (Inbound)</h2>
 
                     <table>
                         <thead>
@@ -51,7 +51,7 @@ export default function Home() {
                 </section>
                 <section>
 
-                    <h2>Outbound Trains</h2>
+                    <h2>Outbound Passenger Trains</h2>
                     <table>
                         <thead>
                             <tr>
