@@ -1,0 +1,44 @@
+
+main {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#emailForm {
+
+    display: flex;
+    place-items: center;
+    place-content: center;
+    
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+
+    > div {
+        display: flex;
+        gap: 1.1rem;
+        flex-direction: column;    
+        width: 100%;
+        max-width: 650px;
+    }
+
+    input, textarea {
+        background-color: white;
+        color: #222;
+        border-radius: 10px;
+    }
+
+        
+}
+
+ul {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 2rem;
+}

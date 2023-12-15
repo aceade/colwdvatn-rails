@@ -27,11 +27,12 @@ export const sendQuery = async (formState: any, dispatch: { (value: { type: Stat
                 })
             });
             if (response.status === 200) {
-                alert("Success!")
-                dispatch({type: StateAction.reset});
+                // alert("Success!")
+                dispatch({type: StateAction.reset, value: "Your query has been sent"});
             } else {
                 console.warn(response.status, response.statusText);
-                alert("Failed!")
+                // alert("Failed!")
+                dispatch({type: StateAction.setTickets, value: "Failed to send"});
             }
         } catch (error) {
             console.error(error);

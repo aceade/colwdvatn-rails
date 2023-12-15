@@ -85,6 +85,7 @@ export function updateFreightFormState(state: object, action: FreightStateAction
                 email: "",
                 company: "",
                 message: "",
+                statusText: action.value
             };
         default: return state;
     }
