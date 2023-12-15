@@ -22,6 +22,7 @@ nav {
         box-sizing: content-box;
         background-color: gold;
         margin-bottom: 1px;
+        color:black;
     }
 
     > #openCart {

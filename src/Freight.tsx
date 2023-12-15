@@ -50,17 +50,18 @@ export function Freight() {
                 </div>
                 <h2>Supported traffic</h2>
                 <ul>
-                    <li>Livestock</li>
-                    <li>Intermodal containers</li>
+                    <li>Livestock</li>|
+                    <li>Intermodal containers</li>|
+                    <li>Timber</li>
                 </ul>
 
                 <div id="photos">
                     <img srcSet="/colwdvatn-rails/trains/FreightTrain-320w.webp 320w, /colwdvatn-rails/trains/FreightTrain-480w.webp 480w, /colwdvatn-rails/trains/FreightTrain-600w.webp 600w, /colwdvatn-rails/trains/FreightTrain-800w.webp 800w"
-                        alt="The first-class Faledonian Lounge"
+                        alt="A cargo train"
                         sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 600px, 800px"
                     />
                     <img srcSet="/colwdvatn-rails/trains/Boxcar-320w.webp 320w, /colwdvatn-rails/trains/Boxcar-480w.webp 480w, /colwdvatn-rails/trains/Boxcar-600w.webp 600w, /colwdvatn-rails/trains/Boxcar-800w.webp 800w"
-                        alt="First class berth"
+                        alt="An old-fashioned boxcar"
                         sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 600px, 800px"
                     />
                 </div>

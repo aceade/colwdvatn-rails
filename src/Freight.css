@@ -42,3 +42,10 @@ ul {
     gap: 1rem;
     font-size: 2rem;
 }
+
+#photos {
+    img {
+        max-height: 400px;
+        overflow-y: clip;
+    }
+}

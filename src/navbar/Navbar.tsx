@@ -99,6 +99,7 @@ export default function Navbar() {
                         <input type="email" id="customerEmail" onChange={(e) => dispatch({
                             type: StateAction.setAddress, value: e.target.value
                         })} />
+                        <label htmlFor="departureDate">Departing On</label>
                         <input type="date" id="departureDate" onChange={(e) => dispatch({
                             type: StateAction.setDate, value: e.target.valueAsDate!
                         })} />
