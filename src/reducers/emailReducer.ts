@@ -43,13 +43,19 @@ export function updateCartFormState(state: object, action: CartStateAction) {
                 ...state,
                 tickets: action.value,
             };
+        case StateAction.setMessage:
+            return {
+                ...state,
+                payStatus: action.value
+            }
         case StateAction.reset:
             return {
                 ...state,
                 name: "",
                 email: "",
                 departureDate: new Date(),
-                tickets: []
+                tickets: [],
+                payStatus: ""
             };
         default:
             return state;

@@ -23,8 +23,10 @@ export default function Navbar() {
     const dialogRef = useRef<HTMLDialogElement>();
     const [cartTotal, setCartTotal] = useState(0);
 
+    const [payStatus, setPayStatus] = useState("");
+
     // putting customer details here because it's going to be common to all pages.
-    const [formState, dispatch] = useReducer(updateCartFormState, {name: "", email: "", departureDate: new Date(), tickets: []});
+    const [formState, dispatch] = useReducer(updateCartFormState, {name: "", email: "", departureDate: new Date(), tickets: cart, payStatus: payStatus});
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -104,6 +106,7 @@ export default function Navbar() {
                             type: StateAction.setDate, value: e.target.valueAsDate!
                         })} />
                         <button onClick={() => makePurchase(formState, dispatch)}>Make Your Reservation</button>
+                        <p>{payStatus}</p>
                     </div>
 
                 </dialog>

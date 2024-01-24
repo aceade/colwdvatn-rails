@@ -8,7 +8,7 @@ import "./photos.css";
 
 export function Freight() {
 
-    const [formState, dispatch] = useReducer(updateFreightFormState, { name: "", email: "", company: "", message: "" });
+    const [formState, dispatch] = useReducer(updateFreightFormState, { name: "", email: "", company: "", statusText: "" });
 
     const [statusText] = useState("");
 

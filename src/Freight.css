@@ -30,6 +30,8 @@ main {
         background-color: white;
         color: #222;
         border-radius: 10px;
+        font-size: 14px;
+        padding: 5px;
     }
 
         
@@ -47,5 +49,13 @@ ul {
     img {
         max-height: 400px;
         overflow-y: clip;
+    }
+}
+
+@media (max-width: 500px) {
+    #emailForm {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 400px;
     }
 }
