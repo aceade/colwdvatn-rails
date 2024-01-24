@@ -47,6 +47,11 @@
 }
 
 @media (max-width: 400px) {
+
+    #photos {
+        gap:0.1rem;
+    }
+
     img {
         max-width: 320px;
     }
