@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     element: <Freight/>
   }
 ], {
-  basename: "/colwdvatn-rails/"
+  basename: "/colwdvatn-rails"
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
