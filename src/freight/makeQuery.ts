@@ -20,19 +20,18 @@ export const sendQuery = async (formState: any, dispatch: { (value: { type: Stat
     const validation = validateDetails(name, email, message);
     if (validation.nameValid && validation.emailValid && validation.messageValid) {
         try {
-            const response = await window.fetch("https://aceade-express-echo.azurewebsites.net/", {
+            const response = await window.fetch("https://aceade-express-echo.azurewebsites.net/api/email", {
                 method: "POST",
                 body: JSON.stringify({
                     name, email, company, message
                 })
             });
             if (response.status === 200) {
-                // alert("Success!")
-                dispatch({type: StateAction.reset, value: "Your query has been sent"});
+                console.log("Success");
+                dispatch({type: StateAction.setMessage, value: "Your query has been sent"});
             } else {
                 console.warn(response.status, response.statusText);
-                // alert("Failed!")
-                dispatch({type: StateAction.setTickets, value: "Failed to send"});
+                dispatch({type: StateAction.setMessage, value: "Failed to send"});
             }
         } catch (error) {
             console.error(error);
