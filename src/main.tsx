@@ -14,15 +14,15 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
-    path: "/fares",
+    path: "/fares/",
     element: <Fares/>
   },
   {
-    path: "/freight",
+    path: "/freight/",
     element: <Freight/>
   }
 ], {
-  basename: "/colwdvatn-rails"
+  basename: "/colwdvatn-rails/"
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
