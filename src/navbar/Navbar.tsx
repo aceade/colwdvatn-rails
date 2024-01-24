@@ -23,7 +23,7 @@ export default function Navbar() {
     const dialogRef = useRef<HTMLDialogElement>();
     const [cartTotal, setCartTotal] = useState(0);
 
-    const [payStatus, setPayStatus] = useState("");
+    const [payStatus] = useState("");
 
     // putting customer details here because it's going to be common to all pages.
     const [formState, dispatch] = useReducer(updateCartFormState, {name: "", email: "", departureDate: new Date(), tickets: cart, payStatus: payStatus});
